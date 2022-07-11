@@ -8,6 +8,12 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Bump Version
+        default: snapshot
+        required: true
 
 jobs:
   build:
